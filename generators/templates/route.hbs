@@ -1,0 +1,22 @@
+import { Router } from '@abstracts/router.class';
+import { Container } from '@config/container.config';
+
+/**
+ * Entity Router which which uses {@link Container} to inject Controller and extends {@link Router}
+ */
+ export class {{pascalCase name}}Router extends Router {
+  constructor() {
+    super();
+  }
+
+  /**
+   * Define controlled routes
+   */
+  define(): void {
+    this.router.route('/').get(Container.resolve('{{pascalCase name}}Controller').getAll);
+    this.router.route('/:{{pascalCase name}}Id').get(Container.resolve('{{pascalCase name}}Controller').getById);
+    this.router.route('/').post(Container.resolve('{{pascalCase name}}Controller').create);
+    this.router.route('/:{{pascalCase name}}Id').put(Container.resolve('{{pascalCase name}}Controller').update);
+    this.router.route('/:{{pascalCase name}}Id').delete(Container.resolve('{{pascalCase name}}Controller').delete);
+  }
+}

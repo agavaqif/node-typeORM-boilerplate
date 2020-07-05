@@ -1,0 +1,15 @@
+  
+# Api DOCS
+docs
+
+# Dependencies
+node_modules/
+
+# Transpiled files
+build/
+
+# VS Code
+.vscode
+
+# Misc
+.DS_Store

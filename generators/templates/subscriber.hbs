@@ -1,0 +1,24 @@
+import {
+  EventSubscriber,
+  EntitySubscriberInterface,
+  InsertEvent,
+} from 'typeorm';
+import { {{pascalCase name}} } from './{{lowerCase name}}.model';
+
+/**
+ * TypeORM Subscriber to entity. Fire function before/after CRUD operations
+ */
+@EventSubscriber()
+export class {{pascalCase name}}Subscriber implements EntitySubscriberInterface<{{pascalCase name}}> {
+  /**
+   * Indicates that this subscriber only listen to Post events.
+   */
+  listenTo() {
+    return {{pascalCase name}};
+  }
+
+  /**
+   * Called before post insertion.
+   */
+  beforeInsert(event: InsertEvent<{{pascalCase name}}>) {}
+}
