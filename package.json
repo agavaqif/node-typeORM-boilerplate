@@ -18,7 +18,7 @@
   "license": "ISC",
   "devDependencies": {
     "@types/node-notifier": "^6.0.1",
-    "node-notifier": "^7.0.1",
+    "node-notifier": "^8.0.1",
     "plop": "^2.7.1",
     "prettier": "^2.0.5",
     "tslint": "^6.1.2",
